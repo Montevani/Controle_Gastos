@@ -14,19 +14,21 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+#--Variavel que irá guardar o caminho de onde está o projeto no sistema operacional
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-@oa1ibwivo24=6+stmmrf29c=rj+n_3u+-w-j+4k_l9h$sntm9'
+#--String para criptografar dados no sistema. Não é seguro ter isso aqui
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+#--Variavel de debug. Mudar para false depois para o usuario não ver nada estranho
 
 ALLOWED_HOSTS = []
-
+#--Lista de domínios que você quer que a sua aplicação funcione com
 
 # Application definition
 
@@ -37,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'contas',
 ]
+#--Aplicações instaladas
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -49,7 +53,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 ROOT_URLCONF = 'controle_gastos.urls'
+#--Configuração de URLs
 
 TEMPLATES = [
     {
@@ -79,6 +85,7 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+#--Configuração para banco de dados
 
 
 # Password validation
@@ -98,6 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+#Autentificador de passwords, checka várias coisas diferentes
 
 
 # Internationalization
@@ -108,6 +116,7 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+#Internacionalização de timezones
 
 USE_L10N = True
 
