@@ -4,3 +4,5 @@ python manage.py runserver
 ctrl+c para parar o servidor
 python manage.py createsuperuser //admin
 12345678cachorro
+python manage.py makemigrations //vê tudo de novo nos models e cria um arquivo migrations dizendo ao django como criar as tabelas no banco de dados
+python manage.py migrate
