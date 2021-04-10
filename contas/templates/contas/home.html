@@ -8,5 +8,16 @@
 </head>
 <body>
     <h1>Seja bem vindo! :)</h1>
+
+    <p>Agora são: {{now}} e aqui embaixo nós teremos uma lista com ts:</p>
+    <ul>
+    {% for transacao in transacoes %}
+        {% if transacao == 't2' %}
+            <li><b>t2: TRANSAÇÃO 2</b></li>
+        {% else %}
+        <li>{{transacao}}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
 </body>
 </html>
