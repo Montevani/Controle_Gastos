@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Transacao
 import datetime
 
 def home(request):
@@ -10,3 +10,8 @@ def home(request):
     #html = "<html><body>It is now %s.</body></html>" % now
 
     return render(request, 'contas/home.html', data)
+
+def listagem(request):
+    data = {}
+    data['transacoes'] = Transacao.objects.all() #Objects é um manager com all, filter etc
+    return render(request, 'contas/listagem.html', data)
