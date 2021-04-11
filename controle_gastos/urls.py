@@ -21,6 +21,6 @@ from contas.views import home, listagem, nova_transacao
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home),
-    path('', listagem),
-    path('nova/', nova_transacao)
+    path('', listagem, name='url_listagem'),
+    path('nova/', nova_transacao, name='url_nova')
 ]
